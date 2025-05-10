@@ -47,6 +47,19 @@ function Toolbox() {
 	};
 
 	this.selectTool = function(toolName) {
+		// if (this.selectedTool != null) {
+		// 	saveState();
+		// }
+
+		//i placed these here to act as resetting the functions to default settings before selecting other tools - without this some tools would take on other tools properties and not work as intended
+		stroke(0, 0, 0, 255);
+		fill(255, 255, 255, 255);
+		strokeWeight(1);
+		blendMode(BLEND);
+		noErase();
+		textAlign(LEFT, BASELINE);
+		rectMode(CORNER);
+	
 		//search through the tools for one that's name matches
 		//toolName
 		for (var i = 0; i < this.tools.length; i++) {
@@ -59,7 +72,7 @@ function Toolbox() {
 				//select the tool and highlight it on the toolbar
 				this.selectedTool = this.tools[i];
 				select("#" + toolName + "sideBarItem").style("border", "2px solid blue");
-
+	
 				//if the tool has an options area. Populate it now.
 				if (this.selectedTool.hasOwnProperty("populateOptions")) {
 					this.selectedTool.populateOptions();
@@ -67,6 +80,8 @@ function Toolbox() {
 			}
 		}
 	};
+	
 
 
 }
+

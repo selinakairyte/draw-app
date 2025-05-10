@@ -10,7 +10,10 @@ html, body {
 
 #content {
 	grid-area: content;
+    /* max-width: 800px; */
+    /* margin: auto; */
 }
+
 
 .header {
 	grid-area: header;
@@ -54,24 +57,33 @@ html, body {
 }
 
 
-	.wrapper {
-		display: grid;
-		height: 100%;
-		grid-template-columns: 70px 230px  minmax(500px, 1fr);
-		grid-template-rows: 35px minmax(500px, 1fr) 160px;
-		grid-template-areas:
-               "header header header"
-				"sidebar content content"
-                "colourP colourP options";
-		background-color: #fff;
-		color: #444;
-	}
+.wrapper {
+	display: grid;
+	height: 100%;
+	grid-template-columns: 70px 230px  minmax(500px, 1fr);
+	grid-template-rows: 35px minmax(500px, 1fr) 160px;
+	grid-template-areas:
+			"header header header"
+			"sidebar content content"
+			"colourP colourP options";
+	background-color: #fff;
+	color: #444;
+
+
+	
+}
+	
 .box {
-  background-color: #444;
+  background-color: #0a206f17;
   color: #fff;
   font-size: 150%;
 }
 
 .header {
-  background-color: #999;
+  background-color: #3a36477e;
+}
+.box.header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between items */
 }

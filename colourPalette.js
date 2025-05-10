@@ -2,12 +2,13 @@
 function ColourPalette() {
 	//a list of web colour strings
 	this.colours = [
-        "black", "silver", "gray", "white", "maroon", "red", "purple",
-		"orange", "pink", "fuchsia", "green", "lime", "olive", "yellow", "navy",
-		"blue", "teal", "aqua"
-	];
+    "black", "gray", "maroon",  "cyan", "dodgerblue", "blue", "navy",
+    "purple", "indigo", "violet", "fuchsia","lime",
+ "deeppink", "crimson", "brown", "chocolate", "orange","yellow"
+];
+
 	//make the start colour be black
-	this.selectedColour = "black";
+	this.selectedColour = "black"; 
 
 	var self = this;
 
@@ -25,7 +26,7 @@ function ColourPalette() {
 		stroke(c);
 
 		//add a new border to the selected colour
-		this.style("border", "2px solid blue");
+		this.style("border", "2px solid pink");
 	};
 
 	//load in the colours
@@ -51,7 +52,7 @@ function ColourPalette() {
 			colourSwatch.mouseClicked(colourClick);
 		}
 
-		select(".colourSwatches").style("border", "2px solid blue");
+		select(".colourSwatches").style("border", "2px solid grey");
 	};
 	//call the loadColours function now it is declared
 	this.loadColours();

@@ -29,6 +29,8 @@ function mirrorDrawTool() {
 		if (mouseIsPressed) {
 			//if the previous values are -1 set them to the current mouse location
 			//and mirrored positions
+			stroke(colourP.selectedColour);
+			strokeWeight(freehandSlider.value()); // changes size
 			if (previousMouseX == -1) {
 				previousMouseX = mouseX;
 				previousMouseY = mouseY;
@@ -120,7 +122,7 @@ function mirrorDrawTool() {
 	//adds a button and click handler to the options area. When clicked
 	//toggle the line of symmetry between horizonatl to vertical
 	this.populateOptions = function() {
-		select(".options").html(
+		select("#toolSpecificOptions").html(
 			"<button id='directionButton'>Make Horizontal</button>");
 		//click handler
 		select("#directionButton").mouseClicked(function() {

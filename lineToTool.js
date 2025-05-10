@@ -14,6 +14,8 @@ function LineToTool(){
 
 		//if mouse gets pressed at mousex or y location, stores the starting position in the startmousex/y variables and draws the line as the mouse is moving...
 		if(mouseIsPressed){
+			stroke(colourP.selectedColour);
+			strokeWeight(freehandSlider.value()); // changes size
 			if(startMouseX == -1){
 				startMouseX = mouseX;
 				startMouseY = mouseY;
